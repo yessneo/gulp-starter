@@ -1,0 +1,75 @@
+$pc-mac: 1500px; // MacBook
+$pc-small: 1280px; // PC(small)
+$tb: 960px; // Tablet
+$sm-side: 630px;  // telephone(side)
+$sm: 480px;  // telephone
+@mixin pc-mac {
+  @media screen and (min-width: ($pc-mac)) {
+    @content;
+  }
+}
+@mixin pc-small {
+  @media screen and (min-width: ($pc-small)) {
+    @content;
+  }
+}
+@mixin tb {
+  @media screen and (min-width: ($tb)) {
+    @content;
+  }
+}
+@mixin sm-side {
+  @media screen and (min-width: ($sm-side)) {
+    @content;
+  }
+}
+@mixin sm {
+  @media screen and (min-width: ($sm)) {
+    @content;
+  }
+}
+
+// ---------------------------------
+// Path
+// ---------------------------------
+
+$fonto: 'Rubik', "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+
+
+// ---------------------------------
+// Grobal Style
+// ---------------------------------
+html * ,
+::before ,
+::after {
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    // @include sm-side {
+    //   font-size: 74%;
+    // }
+    // @include tb {
+    //   font-size: 62.5%;
+    // }
+    // @include pc-mac {
+    //   font-size: 80%;
+    // }
+}
+body {
+  font-size: 1.6rem;
+}
+
+
+// how to media
+// @include tb {
+//     width: 100%;
+//     margin: 0;
+//     // overwrite home__head
+//     padding: 0;
+//     flex: 0 1 auto;
+//   }
+//   @include pc {
+//       padding: 10px 0 0;
+//   }
